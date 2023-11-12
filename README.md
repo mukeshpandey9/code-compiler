@@ -1,8 +1,7 @@
-# React + Vite
+# Code Editor
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<h4>This is an online code compiler that can execute the code written in different languages such as java, cpp, python , c, javascript, ruby, go, clang etc..</h4>
 
-Currently, two official plugins are available:
+<h5>Check Out the demo here</h5>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<a href="https://codemp.netlify.app/">Demo</a>
