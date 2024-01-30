@@ -11,6 +11,10 @@ function CodeEditor() {
     boilerPlate: "",
   });
 
+  
+
+
+
   const handleLanguageChange = (e) => {
     var selectedLanguageObject = languageOptions.find(
       (language) => language.id === parseInt(e.target.value)
@@ -30,6 +34,10 @@ function CodeEditor() {
   useEffect(() => {
     setCode(language.boilerPlate);
   }, [language]);
+
+  const resetCode = ()=>{
+    setCode(language.boilerPlate);
+  }
 
   // Editor Options
 
@@ -56,7 +64,11 @@ function CodeEditor() {
             ))}
           </select>
 
-          <RunBtn code={code} language_id={language?.id} />
+          <div className="flex gap-5">
+          <button className="bg-red-500 text-white h-10 rounded-md border border-white px-3" type="button" onClick={resetCode}>Reset</button>
+
+<RunBtn code={code} language_id={language?.id} />
+          </div>
         </div>
 
         <Editor
@@ -64,8 +76,7 @@ function CodeEditor() {
           height={window.innerWidth > 680 ? "78vh" : "50vh"}
           width="100%"
           language={language?.name}
-          defaultValue={`// Write your code here 
-          `}
+          defaultValue={`// Write your code here\n`}
           theme="vs-dark"
           value={code}
           options={editorOptions}
